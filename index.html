@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>User Registration</title>
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm" action="register.php" method="post">
+            <h2>Register</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+    
+            <button type="button" onclick="register()">Register</button>
+            <script>
+                function register() {
+                    // Replace 'anotherpage.html' with the actual filename or URL of the page you want to redirect to
+                    window.location.href = 'register.php';
+                }
+            </script>
+            <p>Already have an account? <a href="#" onclick="login.html"></a></p>
+            <button onclick="redirectToAnotherPage()">Login</button>
+
+    <script>
+        function redirectToAnotherPage() {
+            // Replace 'anotherpage.html' with the actual filename or URL of the page you want to redirect to
+            window.location.href = 'login.html';
+        }
+    </script>
+        </form>
+        <form id="loginForm" class="form" style="display: none;">
+            <h2>Login</h2>
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="button" onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegistration()">Register</a></p>
+        </form>
+    </div>
+    <script src="validation .js"></script>
+</body>
+</html>
